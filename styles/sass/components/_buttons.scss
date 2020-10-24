@@ -1,0 +1,24 @@
+// Buttons
+
+/*| Button One ||||||||*/
+%button {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-width: 100px;
+    border-style: solid;
+}
+
+.button-one {
+    @extend %button;
+    color: #fff;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}

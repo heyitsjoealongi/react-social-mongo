@@ -1,8 +1,8 @@
 /* Frameworks */
 import React from "react";
 
-/* Styles */
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+/* System */
+import Meta from "../components/Meta";
 
 /* Components */
 import Navigation from "../components/Navigation";
@@ -17,6 +17,7 @@ import ContentItem from "../components/ContentItem";
 export default function Home() {
   return (
     <>
+    <Meta />
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">

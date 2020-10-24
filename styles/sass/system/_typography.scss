@@ -1,0 +1,53 @@
+// Typography
+
+/*| System Font Styles ||||||||*/
+h1 {
+    font-family: $serif;
+    font-size: 90px;
+    font-weight: $serif-bold;
+}
+
+h2 {
+    font-family: $serif;
+    font-size: 60px;
+    font-weight: $serif-bold;
+}
+
+h3 {
+    font-family: $serif;
+    font-size: 60px;
+    font-weight: $serif-reg;
+}
+
+h4 {
+    font-family: $serif;
+    font-size: 30px;
+    font-weight: $serif-reg;
+}
+
+h5 {
+    font-family: $sans-serif;
+    font-size: 15px;
+    font-weight: $sans-serif-reg;
+    font-style: italic;
+}
+
+h6 {
+    font-family: $sans-serif;
+    font-size: 15px;
+    font-weight: $sans-serif-reg;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: $sans-serif;
+    font-size: 15px;
+    font-weight: $sans-serif-reg;
+}
+
+a {
+    font-family: $serif;
+    font-size: 15px;
+    font-weight: $serif-reg;
+}

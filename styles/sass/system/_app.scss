@@ -1,0 +1,32 @@
+//App Base
+
+/*| System Colors ||||||||*/
+$yellow:#FFCC00;
+$secondary-yellow:#E0B400;
+
+$blue:#5465FF;
+$secondary-blue:#3347FF;
+
+$black:#272932;
+$secondary-black:#3F4250;
+
+$grey:#C3C3E6;
+$secondary-grey:#D9DBF1;
+
+/*| System Shadows ||||||||*/
+$button-shadow:0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+$card-shadow:0px 3px 3px 0px rgba(0, 0, 0, 0.3) ;
+
+/*| System Font Imports ||||||||*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;900&display=swap');
+
+/*| System Fonts ||||||||*/
+$sans-serif:'Roboto', sans-serif;
+$serif:'Roboto Slab', serif;
+
+/*| System Font Weights ||||||||*/
+$sans-serif-reg:400;
+$sans-serif-bold:500;
+$serif-reg:500;
+$serif-bold:900;
