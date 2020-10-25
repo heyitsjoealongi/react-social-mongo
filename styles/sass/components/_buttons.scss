@@ -2,6 +2,7 @@
 
 /*| Button |*/
 %button {
+  display: inline-block;
   font-family: $serif;
   font-weight: $serif-regular;
   color: transparent;
@@ -10,9 +11,9 @@
   border-width: 3px;
   border-radius: 3px;
   border-style: solid;
-  margin: 30px 15px;
   padding: 15px 60px;
   transition: all 0.3s ease-in-out;
+  box-shadow: $button-shadow;
 }
 
 /*| Button Light ||||||||*/
@@ -60,5 +61,24 @@
     color: $secondary-yellow;
     background-color: $yellow;
     border-color: $secondary-yellow;
+  }
+}
+
+/*| Button Group ||||||||*/
+.button-group {
+  margin: 30px 15px;
+  .button {
+    margin: 0 15px;
+  }
+}
+
+/*| Media Queries |*/
+@media only screen and (max-width: 768px) {
+  .button-group {
+    margin: 30px 0;
+    .button {
+      margin: 5px 0;
+      width: 100%;
+    }
   }
 }

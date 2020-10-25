@@ -1,29 +1,34 @@
 // Navigation
-/*| Navigation One ||||||||*/
 
+/*| Navigation One ||||||||*/
 %navigation {
-	color: transparent;
-	background-color: transparent;
-	border-radius: 3px;
-	margin: 15px 0;
-	text-decoration: none;
-	ul {
-		li {
-			margin: 5px;
-			a, li>li a {
-				color: transparent;
-				border-color: transparent;
-				border-style: solid;
-				border-width: 3px;
+  color: transparent;
+  background-color: transparent;
+  border-radius: 3px;
+  margin: 15px 0;
+  text-decoration: none;
+  box-shadow: $button-shadow;
+  ul {
+    li {
+      margin: 5px;
+      a,
+      li > li a {
+        color: transparent;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 3px;
         border-radius: 3px;
-        padding: 15px 30px!important;
-				transition: all 0.3s ease-in-out;
-				&:hover, &:focus, &:focus-within, &:active {
-					color: transparent;
-					background-color: transparent;
-				}
-			}
-		}
+        padding: 15px 30px !important;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:active {
+          color: transparent;
+          background-color: transparent;
+        }
+      }
+    }
   }
   .navbar-brand {
     color: transparent;
@@ -33,11 +38,13 @@
       width: 50px;
       height: auto;
       padding: 5px;
-      }
+    }
   }
-	p, span, .navbar-text {
-		color: transparent;
-		font-family: $sans-serif;
+  p,
+  span,
+  .navbar-text {
+    color: transparent;
+    font-family: $sans-serif;
     padding: 0 30px;
   }
   .dropdown-menu {
@@ -52,7 +59,10 @@
       color: transparent;
       padding: 15px 30px;
       transition: all 0.3s ease-in-out;
-      &:hover, &:focus, &:focus-within, &:active {
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:active {
         color: transparent;
         background-color: transparent;
         border-color: transparent;
@@ -71,28 +81,29 @@
     border-radius: 3px;
     padding: 5px;
   }
-  .social { 
+  .social {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     padding: 0 30px;
-    ul{
+    ul {
       align-self: center;
-    list-style: none;
-    margin: 0;
-    li {
       list-style: none;
-      float: left;
-      margin: 0 5px;
-    }
-    a {
-      padding: 5px 15px !important;
+      margin: 0;
+      li {
+        list-style: none;
+        float: left;
+        margin: 0 5px;
+      }
+      a {
+        padding: 5px 15px !important;
+      }
     }
   }
-  }
-  @media only screen and (max-width: 600px) { 
-    a, li>li a { 
+  @media only screen and (max-width: 768px) {
+    a,
+    li > li a {
       text-align: center;
     }
     .navbar-brand {
@@ -101,13 +112,17 @@
         width: 25px;
         height: auto;
         padding: 0;
-        }
+      }
     }
-    p, span {
+    p,
+    span {
       padding: 15px;
     }
+    .dropdown-menu {
+      text-align: center;
+    }
     .social {
-      padding: 0!important;
+      padding: 0 !important;
       ul {
         display: flex;
         padding: 15px;
@@ -122,41 +137,50 @@
 }
 
 .navigation-one {
-	@extend %navigation;
-	color: $black;
-	background-color: $yellow;
-	ul {
-		li {
-			a, li a {
-				color: $black !important;
-				&:hover, &:focus, &:focus-within, &:active {
-          color: $yellow!important;
+  @extend %navigation;
+  color: $black;
+  background-color: $yellow;
+  ul {
+    li {
+      a,
+      li a {
+        color: $black !important;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:active {
+          color: $yellow !important;
           background-color: $secondary-yellow;
-					border-color: $secondary-yellow;
-				}
-			}
-		}
+          border-color: $secondary-yellow;
+        }
+      }
+    }
   }
   .navbar-brand {
-    color: $black!important;
+    color: $black !important;
   }
-	p, span {
-		color: $black!important;
-	}
-	.dropdown-menu {
-		background-color: $yellow;
-		border-color: $secondary-yellow;
-		.dropdown-item {
+  p,
+  span {
+    color: $black !important;
+  }
+  .dropdown-menu {
+    background-color: $yellow;
+    border-color: $secondary-yellow;
+    .dropdown-item {
       color: $black;
       background-color: $yellow;
-			&:hover, &:focus, &:focus-within, &:active, &:visited {
-				color: $yellow;
-          background-color: $secondary-yellow;
-					border-color: $secondary-yellow;
-			}
-		}
-		.dropdown-divider {
-			border-color: $secondary-yellow;
-		}
-	}
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:active,
+      &:visited {
+        color: $yellow;
+        background-color: $secondary-yellow;
+        border-color: $secondary-yellow;
+      }
+    }
+    .dropdown-divider {
+      border-color: $secondary-yellow;
+    }
+  }
 }

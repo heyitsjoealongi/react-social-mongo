@@ -11,7 +11,7 @@ import AnnouncementItem from "../components/AnnouncementItem";
 import SponsorItem from "../components/SponsorItem";
 import ContentItem from "../components/ContentItem";
 
-export default function Home() {
+export default function Index() {
   return (
     <>
       <div className="container-fluid">

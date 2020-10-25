@@ -1,0 +1,12 @@
+//Overwrites
+
+/*| Highlights ||||||||*/
+::-moz-selection {
+  background: $yellow;
+  text-shadow: none;
+}
+
+::selection {
+  background: $yellow;
+  text-shadow: none;
+}

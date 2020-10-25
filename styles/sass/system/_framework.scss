@@ -1,24 +1,42 @@
-//Frameowork Base
+//Framework Base
 
-/*| System Welcome ||||||||*/
-
+/*| System Welcome & Goodbye ||||||||*/
 .welcome {
-    border-color: $secondary-blue;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 3px;
-    margin: 5%;
-    .inside {
-        text-align: center;
-        padding: 5%;
-    }
+  color: $black;
+  border-color: $secondary-blue;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  box-shadow: $card-shadow;
+  margin: 15%;
+  .inside {
+    text-align: center;
+    padding: 15px;
+  }
 }
 
 .goodbye {
-    margin: 5%;
+  color: $black;
+  position: absolute;
+  bottom: 0;
+  .inside {
     text-align: center;
-    .inside {
-        text-align: center;
-        padding: 5%;
+    padding-top: 30px;
+    p {
+      padding: 15px;
+      > svg {
+        width: 25px;
+        height: auto;
+        padding: 5px;
+      }
     }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .welcome {
+    margin: 0;
+  }
+  .goodbye {
+    position: relative;
+  }
 }

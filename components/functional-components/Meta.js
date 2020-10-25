@@ -13,7 +13,7 @@ function Meta() {
         <meta property="og:url" content="https://archtyped.com/" />
         <meta property="og:title" content="Archtyped" />
         <meta property="og:description" content="A Void for the Comforted." />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="https://archtyped.com/Archtyped_Image.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://archtyped.com/" />
@@ -22,7 +22,7 @@ function Meta() {
           property="twitter:description"
           content="A Void for the Comforted."
         />
-        <meta property="twitter:image" content="" />
+        <meta property="twitter:image" content="https://archtyped.com/Archtyped_Image.png" />
       </Head>
     </>
   );

@@ -21,7 +21,7 @@ import Social from "../functional-components/Social";
 /* SVG */
 import Brand from "../../public/archtyped.svg";
 
-const Navigation = (props) => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -30,7 +30,9 @@ const Navigation = (props) => {
     <div>
       <Navbar light expand="md" className="navigation navigation-one">
         <Link href="/">
-          <NavbarBrand><Brand /></NavbarBrand>
+          <NavbarBrand>
+            <Brand />
+          </NavbarBrand>
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -55,11 +57,17 @@ const Navigation = (props) => {
                 Profile
               </DropdownToggle>
               <DropdownMenu left>
-              <Link href="/"><DropdownItem>View Profile</DropdownItem></Link>
+                <Link href="/">
+                  <DropdownItem>View Profile</DropdownItem>
+                </Link>
                 <DropdownItem divider />
-                <Link href="/"><DropdownItem>Update Profile</DropdownItem></Link>
+                <Link href="/">
+                  <DropdownItem>Update Profile</DropdownItem>
+                </Link>
                 <DropdownItem divider />
-                <Link href="/"><DropdownItem>Settings</DropdownItem></Link>
+                <Link href="/">
+                  <DropdownItem>Settings</DropdownItem>
+                </Link>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
