@@ -1,23 +1,19 @@
 /* Frameworks */
 import React from "react";
+import Link from "next/link";
 
 /* System */
 import Meta from "../components/Meta";
 
 /* Components */
-import Navigation from "../components/Navigation";
-import Modals from "../components/Modals";
-import Links from "../components/Links";
-import LinksHashtags from "../components/LinksHashtags";
-import StreamingContainer from "../components/higher-order-components/StreamingContainer";
-import AnnouncementItem from "../components/AnnouncementItem";
-import SponsorItem from "../components/SponsorItem";
-import ContentItem from "../components/ContentItem";
+import Navigation from "../components/higher-order-components/Navigation";
 
 export default function Home() {
   return (
     <>
-    <Meta />
+
+      <Meta />
+
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
@@ -26,29 +22,44 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container-fluid">
+      <div className="container welcome">
         <div className="row">
-          <div className="col-lg-2">
-            <h4>Signup/Login</h4>
-            <Modals />
-            <h4>Sub Navigation</h4>
-            <Links />
-            <h4>Hashtags</h4>
-            <LinksHashtags />
-          </div>
-          <div className="col-lg-8">
-            <StreamingContainer />
-          </div>
-          <div className="col-lg-2">
-            <h4>Announcements</h4>
-            <AnnouncementItem />
-            <h4>Sponsored</h4>
-            <SponsorItem />
-            <h4>Categories</h4>
-            <ContentItem />
+          <div className="col-lg-12">
+            <div className="inside">
+              <h1>Welcome to Archtyped</h1>
+              <p className="lead">Connecting spectral valances with symmetry through voids.</p>
+              <Link href="https://medium.com/archtypical">
+                <button target="_blank" rel="noreferrer" className="button button-light">
+                  Learn More
+                </button>
+              </Link>
+              <Link href="https://medium.com/archtypical/newsletters/atypical">
+                <button target="_blank" rel="noreferrer" className="button button-cta">
+                  Subscribe
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
+
+      <div className="container goodbye">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="inside">
+              <hr/>
+              <p>Made with 🍕 by &nbsp;
+              <Link href="https://twitter.com/collectedview">
+                <a target="_blank" rel="noreferrer">
+                  collectedview
+                </a>
+              </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }

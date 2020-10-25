@@ -1,24 +1,64 @@
 // Buttons
 
-/*| Button One ||||||||*/
+/*| Button |*/
 %button {
-    display: inline-block;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-width: 100px;
-    border-style: solid;
+  font-family: $serif;
+  font-weight: $serif-regular;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  margin: 30px 15px;
+  padding: 15px 60px;
+  transition: all 0.3s ease-in-out;
 }
 
-.button-one {
-    @extend %button;
-    color: #fff;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
+/*| Button Light ||||||||*/
+.button-light {
+  @extend %button;
+  color: #fff;
+  background-color: $blue;
+  border-color: $secondary-blue;
 
-    &:hover {
-        background-color: #000;
-        color: #fff;
-    }
+  &:hover {
+    color: $secondary-blue;
+  }
+}
+
+/*| Button Dark ||||||||*/
+.button-dark {
+  @extend %button;
+  color: $black;
+  background-color: $yellow;
+  border-color: $secondary-yellow;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+/*| Button Alt ||||||||*/
+.button-alt {
+  @extend %button;
+  color: $black;
+  background-color: $grey;
+  border-color: $secondary-grey;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+/*| Button CTA ||||||||*/
+.button-cta {
+  @extend %button;
+  color: $black;
+  border-color: $yellow;
+  &:hover {
+    color: $secondary-yellow;
+    background-color: $yellow;
+    border-color: $secondary-yellow;
+  }
 }

@@ -1,0 +1,24 @@
+//Frameowork Base
+
+/*| System Welcome ||||||||*/
+
+.welcome {
+    border-color: $secondary-blue;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 3px;
+    margin: 5%;
+    .inside {
+        text-align: center;
+        padding: 5%;
+    }
+}
+
+.goodbye {
+    margin: 5%;
+    text-align: center;
+    .inside {
+        text-align: center;
+        padding: 5%;
+    }
+}
