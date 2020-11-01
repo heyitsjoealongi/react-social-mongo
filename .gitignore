@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-package-lock.json
 /.pnp
 .pnp.js
 
@@ -18,7 +17,8 @@ package-lock.json
 
 # misc
 .DS_Store
-/prepros.config
+prepros.config
+package-lock.json
 
 # debug
 npm-debug.log*

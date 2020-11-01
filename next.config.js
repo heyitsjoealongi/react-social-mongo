@@ -1,6 +1,4 @@
-const withCSS = require("@zeit/next-css");
-
-module.exports = withCSS({
+module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -12,4 +10,4 @@ module.exports = withCSS({
 
     return config;
   },
-});
+};
