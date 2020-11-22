@@ -1,0 +1,84 @@
+// Buttons
+
+/*| Button |*/
+%button {
+  display: inline-block;
+  font-family: $serif;
+  font-weight: $serif-regular;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 3px;
+  border-radius: 3px;
+  border-style: solid;
+  padding: 15px 60px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: $button-shadow;
+}
+
+/*| Button Light ||||||||*/
+.button-light {
+  @extend %button;
+  color: #fff;
+  background-color: $blue;
+  border-color: $secondary-blue;
+
+  &:hover {
+    color: $secondary-blue;
+  }
+}
+
+/*| Button Dark ||||||||*/
+.button-dark {
+  @extend %button;
+  color: $black;
+  background-color: $yellow;
+  border-color: $secondary-yellow;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+/*| Button Alt ||||||||*/
+.button-alt {
+  @extend %button;
+  color: $black;
+  background-color: $grey;
+  border-color: $secondary-grey;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+/*| Button CTA ||||||||*/
+.button-cta {
+  @extend %button;
+  color: $black;
+  border-color: $yellow;
+  &:hover {
+    color: $secondary-yellow;
+    background-color: $yellow;
+    border-color: $secondary-yellow;
+  }
+}
+
+/*| Button Group ||||||||*/
+.button-group {
+  margin: 30px 15px;
+  .button {
+    margin: 0 15px;
+  }
+}
+
+/*| Media Queries |*/
+@media only screen and (max-width: 768px) {
+  .button-group {
+    margin: 30px 0;
+    .button {
+      margin: 5px 0;
+      width: 100%;
+    }
+  }
+}

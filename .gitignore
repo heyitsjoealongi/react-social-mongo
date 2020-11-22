@@ -17,7 +17,8 @@
 
 # misc
 .DS_Store
-*.pem
+prepros.config
+package-lock.json
 
 # debug
 npm-debug.log*
@@ -29,6 +30,3 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
-# vercel
-.vercel

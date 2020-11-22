@@ -1,0 +1,42 @@
+//Framework Base
+
+/*| System Welcome & Goodbye ||||||||*/
+.welcome {
+  color: $black;
+  border-color: $secondary-blue;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  box-shadow: $card-shadow;
+  margin: 15%;
+  .inside {
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+.goodbye {
+  color: $black;
+  position: absolute;
+  bottom: 0;
+  .inside {
+    text-align: center;
+    padding-top: 30px;
+    p {
+      padding: 15px;
+      > svg {
+        width: 25px;
+        height: auto;
+        padding: 5px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .welcome {
+    margin: 0;
+  }
+  .goodbye {
+    position: relative;
+  }
+}

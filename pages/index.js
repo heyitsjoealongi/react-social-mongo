@@ -1,65 +1,79 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+/* Frameworks */
+import React from "react";
+import Link from "next/link";
 
-export default function Home() {
+/* System */
+import Meta from "../components/functional-components/Meta";
+
+/* Components */
+import Navigation from "../components/higher-order-components/Navigation";
+
+/* SVG */
+import Brand from "../public/archtyped.svg";
+
+export default function Index() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Meta />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-12">
+            <Navigation />
+          </div>
         </div>
-      </main>
+      </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="welcome">
+              <div className="inside">
+                <h1>Welcome to Archtyped</h1>
+                <p className="lead">
+                  Connecting spectral valances with symmetry through voids.
+                </p>
+                <div className="button-group">
+                  <Link href="https://medium.com/archtypical">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button button-light"
+                    >
+                      Learn More
+                    </a>
+                  </Link>
+                  <Link href="https://medium.com/archtypical/newsletters/atypical">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button button-cta"
+                    >
+                      Subscribe
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-fluid goodbye">
+        <div className="row inside">
+          <div className="col-lg-12">
+            <hr />
+            <p>
+              Made with <Brand /> by &nbsp;
+              <Link href="https://twitter.com/collectedview">
+                <a target="_blank" rel="noreferrer" className="link link-light">
+                  @collectedview
+                </a>
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
