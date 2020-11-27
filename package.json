@@ -1,6 +1,6 @@
 {
   "name": "Archtyped",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "Multi-Page React Application — React, Bootstrap, Next & MongoDB",
   "main": "index.js",
   "scripts": {
