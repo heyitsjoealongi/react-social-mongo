@@ -1,27 +1,45 @@
 //Framework Base
 
-/*| System Welcome & Goodbye ||||||||*/
-.welcome {
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 60px;
+}
+
+/*| System Content ||||||||*/
+.content {
+  width: 100%;
   color: $black;
   border-color: $secondary-blue;
   border-style: solid;
   border-width: 3px;
   border-radius: 3px;
   box-shadow: $card-shadow;
-  margin: 15%;
+  padding: 60px 30px;
   .inside {
     text-align: center;
-    padding: 15px;
+    padding: 90px 60px;
   }
 }
 
-.goodbye {
-  color: $black;
-  position: absolute;
-  bottom: 0;
+/*| Footer Content ||||||||*/
+.footer {
+  width: 100%;
+  height: 100px;
   .inside {
     text-align: center;
-    padding-top: 30px;
     p {
       padding: 15px;
       > svg {
@@ -32,11 +50,12 @@
     }
   }
 }
+
 @media only screen and (max-width: 768px) {
-  .welcome {
+  .content {
     margin: 0;
   }
-  .goodbye {
-    position: relative;
+  .content {
+    padding: 30px 15px;
   }
 }

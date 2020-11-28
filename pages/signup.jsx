@@ -34,34 +34,59 @@ const SignupPage = () => {
   return (
     <>
       <Head>
-        <title>Sign up</title>
+        <title>Sign Up</title>
       </Head>
-      <div>
-        <h2>Sign up</h2>
-        <form onSubmit={handleSubmit}>
-          {errorMsg ? <p style={{ color: "red" }}>{errorMsg}</p> : null}
-          <label htmlFor="name">
-            <input id="name" name="name" type="text" placeholder="Your name" />
-          </label>
-          <label htmlFor="email">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Email address"
-            />
-          </label>
-          <label htmlFor="password">
-            <input
-              id="password"
-              name="password"
-              type="password"
-              placeholder="Create a password"
-            />
-          </label>
-          <button type="submit">Sign up</button>
-        </form>
-      </div>
+      <section>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="content">
+                <div className="inside">
+                  <h2>Sign Up</h2>
+                  <form onSubmit={handleSubmit} className="form form-cta">
+                    {errorMsg ? (
+                      <p style={{ color: "red" }}>{errorMsg}</p>
+                    ) : null}
+                    <div class="form-group">
+                      <label htmlFor="username">Username</label>
+                      <input
+                        id="username"
+                        type="username"
+                        name="username"
+                        placeholder="Username"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label htmlFor="email">Email</label>
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label htmlFor="password">Password</label>
+                      <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Create a Password"
+                        class="form-control"
+                      />
+                    </div>
+                    <button type="submit" class="button button-cta">
+                      Sign up
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

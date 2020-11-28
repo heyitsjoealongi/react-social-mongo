@@ -1,0 +1,73 @@
+// Forms
+
+/*| Link |*/
+%form {
+  display: inline-block;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  color: transparent;
+  width: 100%;
+  min-width: 60vh;
+  .form-group {
+    text-align: left;
+    label {
+      font-weight: $sans-serif-bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+    
+    div {
+      margin: 30px 15px;
+    }
+    .form-control {
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: 1px;
+      border-radius: 3px;
+      border-style: solid;
+      padding: 30px;
+      &:focus {
+        border-color: transparent;
+        box-shadow: transparent;
+      }
+    }
+  }
+
+  .button,
+  a {
+    margin: 15px;
+  }
+}
+
+/*| Form Light ||||||||*/
+.form-light {
+  @extend %form;
+  color: $secondary-blue;
+  .form-group {
+  .form-control {
+    color: $secondary-black;
+    border-color: $secondary-black;
+    &:focus {
+      border-color: $secondary-yellow;
+      box-shadow: 0 0 0 2px $thirdiary-yellow;
+    }
+  }
+}
+}
+
+/*| Form CTA ||||||||*/
+.form-cta {
+  @extend %form;
+  color: $secondary-yellow;
+  .form-group {
+  .form-control {
+    color: $secondary-black;
+    border-color: $secondary-black;
+    &:focus {
+      border-color: $secondary-blue;
+      box-shadow: 0 0 0 2px $thirdiary-blue;
+    }
+  }
+  }
+}
