@@ -44,10 +44,10 @@ handler.patch(upload.single("profilePicture"), async (req, res) => {
     });
     profilePicture = image.secure_url;
   }
-  const { name, bio } = req.body;
+  const { username, bio } = req.body;
 
   const user = await updateUserById(req.db, req.user._id, {
-    ...(name && { name }),
+    ...(username && { username }),
     ...(typeof bio === "string" && { bio }),
     ...(profilePicture && { profilePicture }),
   });

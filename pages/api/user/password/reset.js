@@ -32,7 +32,7 @@ handler.post(async (req, res) => {
     subject: "[nextjs-mongodb-app] Reset your password.",
     html: `
       <div>
-        <p>Hello, ${user.name}</p>
+        <p>Hello, ${user.username}</p>
         <p>Please follow <a href="${process.env.WEB_URI}/forget-password/${token._id}">this link</a> to reset your password.</p>
       </div>
       `,

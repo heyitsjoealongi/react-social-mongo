@@ -38,9 +38,9 @@ function Post({ post }) {
                   marginRight: "0.3rem",
                 }}
                 src={user.profilePicture || defaultProfilePicture(user._id)}
-                alt={user.name}
+                alt={user.username}
               />
-              <b>{user.name}</b>
+              <b>{user.username}</b>
             </a>
           </Link>
         )}

@@ -5,13 +5,13 @@ import { useCurrentUser } from "@/hooks/index";
 const ProfileSection = () => {
   const [user, { mutate }] = useCurrentUser();
   const [isUpdating, setIsUpdating] = useState(false);
-  const nameRef = useRef();
+  const usernameRef = useRef();
   const bioRef = useRef();
   const profilePictureRef = useRef();
   const [msg, setMsg] = useState({ message: "", isError: false });
 
   useEffect(() => {
-    nameRef.current.value = user.name;
+    usernameRef.current.value = user.username;
     bioRef.current.value = user.bio;
   }, [user]);
 
@@ -23,7 +23,7 @@ const ProfileSection = () => {
     if (profilePictureRef.current.files[0]) {
       formData.append("profilePicture", profilePictureRef.current.files[0]);
     }
-    formData.append("name", nameRef.current.value);
+    formData.append("username", usernameRef.current.value);
     formData.append("bio", bioRef.current.value);
     const res = await fetch("/api/user", {
       method: "PATCH",
@@ -111,7 +111,7 @@ const ProfileSection = () => {
               name="name"
               type="text"
               placeholder="Your name"
-              ref={nameRef}
+              ref={usernameRef}
             />
           </label>
           <label htmlFor="bio">

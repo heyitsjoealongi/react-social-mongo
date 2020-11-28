@@ -11,13 +11,13 @@ const handler = nc();
 handler.use(all);
 
 handler.post(async (req, res) => {
-  const { name, password } = req.body;
+  const { username, password } = req.body;
   const email = normalizeEmail(req.body.email);
   if (!isEmail(email)) {
     res.status(400).send("The email you entered is invalid.");
     return;
   }
-  if (!password || !name) {
+  if (!password || !username) {
     res.status(400).send("Missing field(s)");
     return;
   }
@@ -30,7 +30,7 @@ handler.post(async (req, res) => {
     email,
     password: hashedPassword,
     bio: "",
-    name,
+    username,
   });
   req.logIn(user, (err) => {
     if (err) throw err;

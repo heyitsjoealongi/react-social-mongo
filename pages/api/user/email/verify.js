@@ -24,7 +24,7 @@ handler.post(async (req, res) => {
     from: process.env.EMAIL_FROM,
     html: `
       <div>
-        <p>Hello, ${req.user.name}</p>
+        <p>Hello, ${req.user.username}</p>
         <p>Please follow <a href="${process.env.WEB_URI}/verify-email/${token._id}">this link</a> to confirm your email.</p>
       </div>
       `,

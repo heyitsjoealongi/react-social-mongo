@@ -15,7 +15,7 @@ const SignupPage = () => {
     e.preventDefault();
     const body = {
       email: e.currentTarget.email.value,
-      name: e.currentTarget.name.value,
+      username: e.currentTarget.username.value,
       password: e.currentTarget.password.value,
     };
     const res = await fetch("/api/users", {

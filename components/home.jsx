@@ -8,7 +8,7 @@ import Posts from "@/components/post/posts";
 
 import { useCurrentUser } from "@/hooks/index";
 
-export default function content() {
+export default function Content() {
   const [user] = useCurrentUser();
   return (
     <>
@@ -21,7 +21,7 @@ export default function content() {
             <div className="col-lg-4">
               <h4>
                 Hello,
-                {user ? user.name : "stranger"}
+                {user ? user.username : "stranger"}
               </h4>
             </div>
           </div>

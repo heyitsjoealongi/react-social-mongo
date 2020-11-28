@@ -27,7 +27,7 @@ export async function updateUserById(db, id, update) {
 
 export async function insertUser(
   db,
-  { email, password, bio = "", name, profilePicture }
+  { email, password, bio = "", username, profilePicture }
 ) {
   return db
     .collection("users")
@@ -37,7 +37,7 @@ export async function insertUser(
       profilePicture,
       email,
       password,
-      name,
+      username,
       bio,
     })
     .then(({ ops }) => ops[0]);

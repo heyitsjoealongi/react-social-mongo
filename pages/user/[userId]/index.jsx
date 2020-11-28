@@ -11,7 +11,7 @@ import { defaultProfilePicture } from "@/lib/default";
 
 export default function UserPage({ user }) {
   if (!user) return <Error statusCode={404} />;
-  const { name, email, bio, profilePicture, _id } = user || {};
+  const { username, email, bio, profilePicture, _id } = user || {};
   const [currentUser] = useCurrentUser();
   const isCurrentUser = currentUser?._id === user._id;
   return (
@@ -47,18 +47,18 @@ export default function UserPage({ user }) {
         `}
       </style>
       <Head>
-        <title>{name}</title>
+        <title>{username}</title>
       </Head>
       <div style={{ display: "flex", alignItems: "center" }}>
         <img
           src={profilePicture || defaultProfilePicture(_id)}
           width="256"
           height="256"
-          alt={name}
+          alt={username}
         />
         <section>
           <div>
-            <h2>{name}</h2>
+            <h2>{username}</h2>
             {isCurrentUser && (
               <Link href="/settings">
                 <button type="button">Edit</button>
