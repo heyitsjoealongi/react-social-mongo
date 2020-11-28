@@ -8,6 +8,9 @@
   font-family: $sans-serif;
   font-weight: $sans-serif-regular;
   color: transparent;
+  .form-title {
+    color: transparent;
+  }
   .form-group {
     text-align: left;
     label {
@@ -46,17 +49,20 @@
 /*| Form Light ||||||||*/
 .form-light {
   @extend %form;
-  color: $secondary-blue;
+  color: $blue;
+  .form-title {
+    color: $blue;
+  }
   .form-group {
     .form-control {
-      color: $secondary-black;
-      border-color: $secondary-black;
+      color: $black;
+      border-color: $black;
       &:focus {
-        border-color: $secondary-yellow;
-        box-shadow: 0 0 0 2px $thirdiary-yellow;
+        border-color: $blue;
+        box-shadow: 0 0 0 2px $thirdiary-blue;
       }
       &::placeholder {
-        color: $secondary-black;
+        color: $black;
       }
     }
   }
@@ -65,14 +71,17 @@
 /*| Form CTA ||||||||*/
 .form-cta {
   @extend %form;
-  color: $secondary-yellow;
+  color: $yellow;
+  .form-title {
+    color: $yellow;
+  }
   .form-group {
     .form-control {
-      color: $secondary-black;
-      border-color: $secondary-black;
+      color: $black;
+      border-color: $black;
       &:focus {
-        border-color: $secondary-blue;
-        box-shadow: 0 0 0 2px $thirdiary-blue;
+        border-color: $yellow;
+        box-shadow: 0 0 0 2px $thirdiary-yellow;
       }
     }
   }
@@ -126,13 +135,13 @@
 /*| Form Inline Light ||||||||*/
 .form-inline-light {
   @extend %form-inline;
-  color: $secondary-blue;
+  color: $blue;
   .form-group {
     .form-control {
-      color: $secondary-black;
-      border-color: $secondary-black;
+      color: $black;
+      border-color: $black;
       &:focus {
-        border-color: $secondary-yellow;
+        border-color: $yellow;
         box-shadow: 0 0 0 2px $thirdiary-yellow;
       }
       &::placeholder {

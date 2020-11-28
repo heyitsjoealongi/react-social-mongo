@@ -17,41 +17,57 @@ export default function UserPage({ user }) {
   return (
     <>
       <Head>
-        <title>{username}</title>
+        <title>
+          {username} [#{username}]
+        </title>
       </Head>
       <section>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div>
-                <img
-                  src={profilePicture || defaultProfilePicture(_id)}
-                  width="256"
-                  height="256"
-                  alt={username}
-                />
-                <div>
-                  <h1>{username}</h1>
+        <div className="container">
+          <div className="person">
+            <div className="inside">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="person-picture">
+                    <img
+                      src={profilePicture || defaultProfilePicture(_id)}
+                      alt={username}
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div className="person-username">
+                    <h2>{username}</h2>
+                    <div className="person-handle">
+                      <Link href={`/user/${user._id}`}>
+                        <a className="link link-light">#{username}</a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div className="person-bio">
+                    <p className="lead">{bio}</p>
+                  </div>
+                </div>
+                <div className="col-lg-12">
                   {isCurrentUser && (
                     <Link href="/settings">
-                      <button type="button">Edit</button>
+                      <button
+                        type="button"
+                        className="button button-dark person-button"
+                      >
+                        Edit Profile
+                      </button>
                     </Link>
                   )}
                 </div>
-                Bio
-                <p>{bio}</p>
-                Email
-                <p>{email}</p>
               </div>
             </div>
+            <hr />
           </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div>
-                <h2>Voids</h2>
-                <Posts creatorId={user._id} />
-              </div>
-            </div>
+          <div>
+            <h4 className="text-center">Voids</h4>
+            <Posts creatorId={user._id} />
           </div>
         </div>
       </section>

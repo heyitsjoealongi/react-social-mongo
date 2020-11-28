@@ -43,19 +43,19 @@ const LoginPage = () => {
             <div className="col-lg-12">
               <div className="content">
                 <div className="inside">
-                  <h2>Login</h2>
                   <form onSubmit={onSubmit} className="form form-light">
+                    <h2 className="form-title">Login</h2>
                     {errorMsg ? (
                       <p style={{ color: "red" }}>{errorMsg}</p>
                     ) : null}
-                    <div class="form-group">
+                    <div className="form-group">
                       <label htmlFor="email">Email</label>
                       <input
                         id="email"
                         type="email"
                         name="email"
                         placeholder="Email address"
-                        class="form-control"
+                        className="form-control"
                       />
                     </div>
                     <div class="form-group">
@@ -65,10 +65,10 @@ const LoginPage = () => {
                         type="password"
                         name="password"
                         placeholder="Password"
-                        class="form-control"
+                        className="form-control"
                       />
                     </div>
-                    <button type="submit" class="button button-light">
+                    <button type="submit" className="button button-light">
                       Sign In
                     </button>
                     <Link href="/forget-password">

@@ -81,26 +81,6 @@
     border-radius: 3px;
     padding: 5px;
   }
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding: 0 30px;
-    ul {
-      align-self: center;
-      list-style: none;
-      margin: 0;
-      li {
-        list-style: none;
-        float: left;
-        margin: 0 5px;
-      }
-      a {
-        padding: 5px 15px !important;
-      }
-    }
-  }
   @media only screen and (max-width: 768px) {
     a,
     li > li a {
@@ -120,18 +100,6 @@
     }
     .dropdown-menu {
       text-align: center;
-    }
-    .social {
-      padding: 0 !important;
-      ul {
-        display: flex;
-        padding: 15px;
-        li {
-          a {
-            padding: 5px !important;
-          }
-        }
-      }
     }
   }
 }

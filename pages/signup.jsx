@@ -42,8 +42,8 @@ const SignupPage = () => {
             <div className="col-lg-12">
               <div className="content">
                 <div className="inside">
-                  <h2>Sign Up</h2>
                   <form onSubmit={handleSubmit} className="form form-cta">
+                    <h2 className="form-title">Sign Up</h2>
                     {errorMsg ? (
                       <p style={{ color: "red" }}>{errorMsg}</p>
                     ) : null}
@@ -78,7 +78,7 @@ const SignupPage = () => {
                       />
                     </div>
                     <button type="submit" class="button button-cta">
-                      Sign up
+                      Sign Up
                     </button>
                   </form>
                 </div>

@@ -24,6 +24,12 @@ main {
   padding: 90px 60px;
 }
 
+.container {
+  width: 100%;
+  max-width: 60vw;
+  min-width: 60vw;
+}
+
 /*| System Content ||||||||*/
 .content {
   width: 100%;
@@ -33,10 +39,10 @@ main {
   border-width: 3px;
   border-radius: 3px;
   box-shadow: $card-shadow;
-  padding: 60px 30px;
+  padding: 90px 60px;
   .inside {
     text-align: center;
-    padding: 90px 60px;
+    padding: 60px 30px;
   }
 }
 

@@ -39,27 +39,30 @@ export default function PostEditor() {
 
   return (
     <>
-      <p style={{ color: "#0070f3", textAlign: "center" }}>{msg}</p>
-      <form
-        class="form-inline form-inline-light"
-        onSubmit={hanldeSubmit}
-        autoComplete="off"
-      >
-        <div class="form-group">
-          <label for="name" class="sr-only">
-            Password
-          </label>
-          <input
-            name="content"
-            type="text"
-            class="form-control"
-            placeholder="Hit the lights"
-          />
+      <div className="row">
+        <div className="col-lg-12">
+          <form
+            class="form-inline form-inline-light"
+            onSubmit={hanldeSubmit}
+            autoComplete="off"
+          >
+            <div class="form-group">
+              <label for="name" class="sr-only">
+                Password
+              </label>
+              <input
+                name="content"
+                type="text"
+                class="form-control"
+                placeholder="Hit the lights"
+              />
+            </div>
+            <button type="submit" class="button button-cta">
+              Create Void
+            </button>
+          </form>
         </div>
-        <button type="submit" class="button button-cta">
-          Create Void
-        </button>
-      </form>
+      </div>
     </>
   );
 }

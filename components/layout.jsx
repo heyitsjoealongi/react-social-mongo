@@ -45,13 +45,13 @@ export default function Layout({ children }) {
                 <div className="collapse navbar-collapse" id="navbarText">
                   {!user ? (
                     <ul className="navbar-nav mr-auto">
-                      <li className="nav-item active">
+                      <li className="nav-item">
                         <a className="nav-link" href="/">
                           Archtyped
                           <span className="sr-only">(current)</span>
                         </a>
                       </li>
-                      <li className="nav-item active">
+                      <li className="nav-item">
                         <a className="nav-link" href="/">
                           Voids
                           <span className="sr-only">(current)</span>
@@ -60,7 +60,7 @@ export default function Layout({ children }) {
                     </ul>
                   ) : (
                     <ul className="navbar-nav mr-auto">
-                      <li className="nav-item active">
+                      <li className="nav-item">
                         <a className="nav-link" href="/">
                           Home
                           <span className="sr-only">(current)</span>
@@ -73,16 +73,16 @@ export default function Layout({ children }) {
                       </li>
                     </ul>
                   )}
-                  <span className="navbar-text social">
+                  <span>
                     {!user ? (
                       <>
-                        <ul className="mr-auto">
-                          <li>
+                        <ul className="navbar-nav mr-auto">
+                          <li className="nav-item">
                             <Link href="/login">
                               <a>Login</a>
                             </Link>
                           </li>
-                          <li>
+                          <li className="nav-item">
                             <Link href="/signup">
                               <a>Sign Up</a>
                             </Link>
@@ -91,14 +91,14 @@ export default function Layout({ children }) {
                       </>
                     ) : (
                       <>
-                        <ul>
-                          <li>
+                        <ul className="navbar-nav mr-auto">
+                          <li className="nav-item">
                             <Link href={`/user/${user._id}`}>
                               <a>Profile</a>
                             </Link>
                           </li>
                           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                          <li>
+                          <li className="nav-item">
                             <a
                               tabIndex={0}
                               role="button"

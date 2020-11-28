@@ -19,26 +19,18 @@ export default function Content() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h4 className="text-center">
-                Hello,
+              <h2 className="text-center">
+                Hello,&nbsp;
                 {user ? user.username : "stranger"}
-              </h4>
+              </h2>
               <p className="lead text-center">
                 Enter a spectral void below, what you think, what you saw, where
                 you are, whichever you would like.
               </p>
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <PostEditor />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <Posts />
-            </div>
-          </div>
+          <PostEditor />
+          <Posts />
         </div>
       </section>
     </>
