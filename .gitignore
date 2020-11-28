@@ -17,8 +17,10 @@
 
 # misc
 .DS_Store
+.env
 prepros.config
 package-lock.json
+yarn.lock
 
 # debug
 npm-debug.log*
