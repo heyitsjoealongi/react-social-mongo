@@ -15,7 +15,7 @@
       font-size: 15px;
       text-transform: uppercase;
     }
-    
+
     div {
       margin: 30px 15px;
     }
@@ -45,15 +45,15 @@
   @extend %form;
   color: $secondary-blue;
   .form-group {
-  .form-control {
-    color: $secondary-black;
-    border-color: $secondary-black;
-    &:focus {
-      border-color: $secondary-yellow;
-      box-shadow: 0 0 0 2px $thirdiary-yellow;
+    .form-control {
+      color: $secondary-black;
+      border-color: $secondary-black;
+      &:focus {
+        border-color: $secondary-yellow;
+        box-shadow: 0 0 0 2px $thirdiary-yellow;
+      }
     }
   }
-}
 }
 
 /*| Form CTA ||||||||*/
@@ -61,13 +61,13 @@
   @extend %form;
   color: $secondary-yellow;
   .form-group {
-  .form-control {
-    color: $secondary-black;
-    border-color: $secondary-black;
-    &:focus {
-      border-color: $secondary-blue;
-      box-shadow: 0 0 0 2px $thirdiary-blue;
+    .form-control {
+      color: $secondary-black;
+      border-color: $secondary-black;
+      &:focus {
+        border-color: $secondary-blue;
+        box-shadow: 0 0 0 2px $thirdiary-blue;
+      }
     }
-  }
   }
 }
