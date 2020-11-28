@@ -9,43 +9,32 @@ function Post({ post }) {
   const user = useUser(post.creatorId);
   return (
     <>
-      <style jsx>
-        {`
-          div {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-            padding: 1.5rem;
-            margin-bottom: 0.5rem;
-            transition: box-shadow 0.2s ease 0s;
-          }
-          div:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-          }
-          small {
-            color: #777;
-          }
-        `}
-      </style>
-      <div>
-        {user && (
-          <Link href={`/user/${user._id}`}>
-            <a style={{ display: "inline-flex", alignItems: "center" }}>
-              <img
-                width="27"
-                height="27"
-                style={{
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  marginRight: "0.3rem",
-                }}
-                src={user.profilePicture || defaultProfilePicture(user._id)}
-                alt={user.username}
-              />
-              <b>{user.username}</b>
-            </a>
-          </Link>
-        )}
-        <p>{post.content}</p>
-        <small>{new Date(post.createdAt).toLocaleString()}</small>
+      <div className="content">
+        <div className="row">
+          <div className="col-lg-8">
+            {user && (
+              <Link href={`/user/${user._id}`}>
+                <a className="link-simple link-simple-light">
+                  <img
+                    width="60"
+                    height="60"
+                    src={user.profilePicture || defaultProfilePicture(user._id)}
+                    alt={user.username}
+                  />
+                  <b className="pl-2">{user.username}</b>
+                </a>
+              </Link>
+            )}
+          </div>
+          <div className="col-lg-4">
+            <small>{new Date(post.createdAt).toLocaleString()}</small>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-12">
+            <p className="lead my-2">{post.content}</p>
+          </div>
+        </div>
       </div>
     </>
   );

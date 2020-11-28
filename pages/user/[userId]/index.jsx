@@ -16,65 +16,45 @@ export default function UserPage({ user }) {
   const isCurrentUser = currentUser?._id === user._id;
   return (
     <>
-      <style jsx>
-        {`
-          h2 {
-            text-align: left;
-            margin-right: 0.5rem;
-          }
-          button {
-            margin: 0 0.25rem;
-          }
-          img {
-            width: 10rem;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px 1px;
-            margin-right: 1.5rem;
-            background-color: #f3f3f3;
-          }
-          div {
-            color: #777;
-          }
-          p {
-            font-family: monospace;
-            color: #444;
-            margin: 0.25rem 0 0.75rem;
-          }
-          a {
-            margin-left: 0.25rem;
-          }
-        `}
-      </style>
       <Head>
         <title>{username}</title>
       </Head>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <img
-          src={profilePicture || defaultProfilePicture(_id)}
-          width="256"
-          height="256"
-          alt={username}
-        />
-        <section>
-          <div>
-            <h2>{username}</h2>
-            {isCurrentUser && (
-              <Link href="/settings">
-                <button type="button">Edit</button>
-              </Link>
-            )}
+      <section>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12">
+              <div>
+                <img
+                  src={profilePicture || defaultProfilePicture(_id)}
+                  width="256"
+                  height="256"
+                  alt={username}
+                />
+                <div>
+                  <h1>{username}</h1>
+                  {isCurrentUser && (
+                    <Link href="/settings">
+                      <button type="button">Edit</button>
+                    </Link>
+                  )}
+                </div>
+                Bio
+                <p>{bio}</p>
+                Email
+                <p>{email}</p>
+              </div>
+            </div>
           </div>
-          Bio
-          <p>{bio}</p>
-          Email
-          <p>{email}</p>
-        </section>
-      </div>
-      <div>
-        <h3>My posts</h3>
-        <Posts creatorId={user._id} />
-      </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div>
+                <h2>Voids</h2>
+                <Posts creatorId={user._id} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

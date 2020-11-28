@@ -43,28 +43,40 @@ export default function Layout({ children }) {
                   <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
-                  <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                      <a className="nav-link" href="/">
-                        Home
-                        <span className="sr-only">(current)</span>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="/">
-                        Features
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="/">
-                        Pricing
-                      </a>
-                    </li>
-                  </ul>
+                  {!user ? (
+                    <ul className="navbar-nav mr-auto">
+                      <li className="nav-item active">
+                        <a className="nav-link" href="/">
+                          Archtyped
+                          <span className="sr-only">(current)</span>
+                        </a>
+                      </li>
+                      <li className="nav-item active">
+                        <a className="nav-link" href="/">
+                          Voids
+                          <span className="sr-only">(current)</span>
+                        </a>
+                      </li>
+                    </ul>
+                  ) : (
+                    <ul className="navbar-nav mr-auto">
+                      <li className="nav-item active">
+                        <a className="nav-link" href="/">
+                          Home
+                          <span className="sr-only">(current)</span>
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="/">
+                          Voids
+                        </a>
+                      </li>
+                    </ul>
+                  )}
                   <span className="navbar-text social">
                     {!user ? (
                       <>
-                        <ul>
+                        <ul className="mr-auto">
                           <li>
                             <Link href="/login">
                               <a>Login</a>

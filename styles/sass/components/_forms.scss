@@ -1,13 +1,13 @@
 // Forms
 
-/*| Link |*/
+/*| Form |*/
 %form {
   display: inline-block;
+  width: 100%;
+  min-width: 60vh;
   font-family: $sans-serif;
   font-weight: $sans-serif-regular;
   color: transparent;
-  width: 100%;
-  min-width: 60vh;
   .form-group {
     text-align: left;
     label {
@@ -31,6 +31,9 @@
         border-color: transparent;
         box-shadow: transparent;
       }
+      &::placeholder {
+        color: transparent;
+      }
     }
   }
 
@@ -52,6 +55,9 @@
         border-color: $secondary-yellow;
         box-shadow: 0 0 0 2px $thirdiary-yellow;
       }
+      &::placeholder {
+        color: $secondary-black;
+      }
     }
   }
 }
@@ -67,6 +73,70 @@
       &:focus {
         border-color: $secondary-blue;
         box-shadow: 0 0 0 2px $thirdiary-blue;
+      }
+    }
+  }
+}
+
+/*| Form Inline |*/
+%form-inline {
+  width: 100%;
+  min-width: 60vh;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  color: transparent;
+  margin: 60px 0;
+  .form-group {
+    text-align: left;
+    width: 100%;
+    label {
+      font-weight: $sans-serif-bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+    div {
+      margin: 30px 15px;
+    }
+    .form-control {
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: 1px;
+      border-radius: 3px;
+      border-style: solid;
+      width: 100%;
+      padding: 30px;
+      &:focus {
+        border-color: transparent;
+        box-shadow: transparent;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .button,
+  a {
+    width: 100%;
+    margin: 15px 0px;
+  }
+}
+
+/*| Form Inline Light ||||||||*/
+.form-inline-light {
+  @extend %form-inline;
+  color: $secondary-blue;
+  .form-group {
+    .form-control {
+      color: $secondary-black;
+      border-color: $secondary-black;
+      &:focus {
+        border-color: $secondary-yellow;
+        box-shadow: 0 0 0 2px $thirdiary-yellow;
+      }
+      &::placeholder {
+        color: $secondary-black;
       }
     }
   }

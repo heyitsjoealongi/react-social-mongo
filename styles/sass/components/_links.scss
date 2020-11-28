@@ -21,7 +21,7 @@
   }
 }
 
-/*| Button Light ||||||||*/
+/*| Link Light ||||||||*/
 .link-light {
   @extend %link;
   color: $blue;
@@ -32,7 +32,7 @@
   }
 }
 
-/*| Button Dark ||||||||*/
+/*| Link Dark ||||||||*/
 .link-dark {
   @extend %link;
   color: $yellow;
@@ -43,7 +43,7 @@
   }
 }
 
-/*| Button Alt ||||||||*/
+/*| Link Alt ||||||||*/
 .link-alt {
   @extend %link;
   color: $grey;
@@ -54,12 +54,39 @@
   }
 }
 
-/*| Button CTA ||||||||*/
+/*| Link CTA ||||||||*/
 .link-cta {
   @extend %link;
   color: $black;
   &:hover {
     color: $black;
     border-color: $secondary-yellow;
+  }
+}
+
+/*| Link Simple|*/
+%link-simple {
+  display: inline-block;
+  font-family: $serif;
+  font-weight: $serif-regular;
+  color: transparent;
+  background-color: transparent;
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+/*| Link Simple ||||||||*/
+.link-simple-light {
+  @extend %link-simple;
+  color: $blue;
+  &:hover {
+    color: $black;
   }
 }

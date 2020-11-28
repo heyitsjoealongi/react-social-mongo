@@ -1,4 +1,9 @@
+/* Framework */
 import React, { useState } from "react";
+
+/* SVG */
+import Brand from "../../public/archtyped.svg";
+
 import { useCurrentUser } from "@/hooks/index";
 
 export default function PostEditor() {
@@ -36,15 +41,23 @@ export default function PostEditor() {
     <>
       <p style={{ color: "#0070f3", textAlign: "center" }}>{msg}</p>
       <form
+        class="form-inline form-inline-light"
         onSubmit={hanldeSubmit}
-        style={{ flexDirection: "row" }}
         autoComplete="off"
       >
-        <label htmlFor="name">
-          <input name="content" type="text" placeholder="Hit the lights" />
-        </label>
-        <button type="submit" style={{ marginLeft: "0.5rem" }}>
-          Post
+        <div class="form-group">
+          <label for="name" class="sr-only">
+            Password
+          </label>
+          <input
+            name="content"
+            type="text"
+            class="form-control"
+            placeholder="Hit the lights"
+          />
+        </div>
+        <button type="submit" class="button button-cta">
+          Create Void
         </button>
       </form>
     </>
