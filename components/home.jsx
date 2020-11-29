@@ -21,7 +21,7 @@ export default function Content() {
             <div className="col-lg-12">
               <h2 className="text-center">
                 Hello,&nbsp;
-                {user ? user.username : "stranger"}
+                {user ? user.username : "Voider"}
               </h2>
               <p className="lead text-center">
                 Enter a spectral void below, what you think, what you saw, where

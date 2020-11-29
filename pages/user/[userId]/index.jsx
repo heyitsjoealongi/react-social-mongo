@@ -39,7 +39,9 @@ export default function UserPage({ user }) {
                     <h2>{username}</h2>
                     <div className="person-handle">
                       <Link href={`/user/${user._id}`}>
-                        <a className="link link-light">#{username}</a>
+                        <a className="link-simple link-simple-light">
+                          #{username}
+                        </a>
                       </Link>
                     </div>
                   </div>

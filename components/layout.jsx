@@ -124,22 +124,20 @@ export default function Layout({ children }) {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
-              <div className="goodbye">
-                <div className="inside">
-                  <hr />
-                  <p>
-                    Made with <Brand /> by &nbsp;
-                    <Link href="https://twitter.com/collectedview">
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        className="link link-light"
-                      >
-                        @collectedview
-                      </a>
-                    </Link>
-                  </p>
-                </div>
+              <div className="inside">
+                <hr />
+                <p>
+                  Made with <Brand /> by &nbsp;
+                  <Link href="https://twitter.com/collectedview">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="link link-light"
+                    >
+                      @collectedview
+                    </a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

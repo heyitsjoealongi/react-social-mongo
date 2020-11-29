@@ -10,30 +10,41 @@ function Post({ post }) {
   const user = useUser(post.creatorId);
   return (
     <>
-      <div className="content">
+      <div className="void-content">
         <div className="row">
           <div className="col-lg-8">
             {user && (
               <Link href={`/user/${user._id}`}>
                 <a className="link-simple link-simple-light">
-                  <img
-                    width="60"
-                    height="60"
-                    src={user.profilePicture || defaultProfilePicture(user._id)}
-                    alt={user.username}
-                  />
-                  <b className="pl-2">{user.username}</b>
+                  <div className="void-status">
+                    <div className="void-avatar">
+                      <img
+                        src={
+                          user.profilePicture || defaultProfilePicture(user._id)
+                        }
+                        alt={user.username}
+                      />
+                    </div>
+                    <div className="void-username">
+                      <h4>{user.username}</h4>
+                      <p>#{user.username}</p>
+                    </div>
+                  </div>
                 </a>
               </Link>
             )}
           </div>
           <div className="col-lg-4">
-            <small>{new Date(post.createdAt).toLocaleString()}</small>
+            <div className="void-timestamp">
+              <p>{new Date(post.createdAt).toLocaleString()}</p>
+            </div>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <p className="lead my-2">{post.content}</p>
+            <div className="void-msg">
+              <p>{post.content}</p>
+            </div>
           </div>
         </div>
       </div>
