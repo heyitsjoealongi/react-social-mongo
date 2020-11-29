@@ -83,82 +83,109 @@ const ProfileSection = () => {
         <title>Settings</title>
       </Head>
       <section>
-        <h2>Edit Profile</h2>
-        {msg.message ? (
-          <p
-            style={{
-              color: msg.isError ? "red" : "#0070f3",
-              textAlign: "center",
-            }}
-          >
-            {msg.message}
-          </p>
-        ) : null}
-        <form onSubmit={handleSubmit}>
-          {!user.emailVerified ? (
-            <p>
-              Your email has not been verify. {/* eslint-disable-next-line */}
-              <a role="button" onClick={sendVerificationEmail}>
-                Send verification email
-              </a>
-            </p>
-          ) : null}
-          <label htmlFor="name">
-            Name
-            <input
-              required
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              ref={usernameRef}
-            />
-          </label>
-          <label htmlFor="bio">
-            Bio
-            <textarea
-              id="bio"
-              name="bio"
-              type="text"
-              placeholder="Bio"
-              ref={bioRef}
-            />
-          </label>
-          <label htmlFor="avatar">
-            Profile picture
-            <input
-              type="file"
-              id="avatar"
-              name="avatar"
-              accept="image/png, image/jpeg"
-              ref={profilePictureRef}
-            />
-          </label>
-          <button disabled={isUpdating} type="submit">
-            Save
-          </button>
-        </form>
-        <form onSubmit={handleSubmitPasswordChange}>
-          <label htmlFor="oldpassword">
-            Old Password
-            <input
-              type="password"
-              name="oldPassword"
-              id="oldpassword"
-              required
-            />
-          </label>
-          <label htmlFor="newpassword">
-            New Password
-            <input
-              type="password"
-              name="newPassword"
-              id="newpassword"
-              required
-            />
-          </label>
-          <button type="submit">Change Password</button>
-        </form>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="welcome-message">
+                <h2>{user ? user.username : "Archtyper"}</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="content">
+                <div className="inside">
+                  <form onSubmit={handleSubmit} className="form form-light">
+                    <h4>Edit Profile</h4>
+                    <div className="form-group">
+                      <label htmlFor="avatar">Profile picture</label>
+                      <input
+                        type="file"
+                        id="avatar"
+                        name="avatar"
+                        accept="image/png, image/jpeg"
+                        ref={profilePictureRef}
+                        className="form-control-file"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label htmlFor="name">Name</label>
+                      <input
+                        required
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        ref={usernameRef}
+                        className="form-control"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="bio">Bio</label>
+                      <textarea
+                        id="bio"
+                        name="bio"
+                        type="text"
+                        placeholder="Bio"
+                        ref={bioRef}
+                        className="form-control"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                    <button
+                      disabled={isUpdating}
+                      type="submit"
+                      className="button button-light button-inline"
+                    >
+                      Update Profile
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-12">
+              <div className="content">
+                <div className="inside">
+                  <form
+                    onSubmit={handleSubmitPasswordChange}
+                    className="form form-light"
+                  >
+                    <h4>Change Password</h4>
+                    <div className="form-group">
+                      <label htmlFor="oldpassword">Old Password</label>
+                      <input
+                        required
+                        type="password"
+                        id="oldpassword"
+                        name="oldPassword"
+                        placeholder="Old Password"
+                        className="form-control"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="newpassword">New Password</label>
+                      <input
+                        required
+                        type="password"
+                        id="newpassword"
+                        name="newPassword"
+                        placeholder="New Password"
+                        className="form-control"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="button button-light button-inline"
+                    >
+                      Save Changes
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
@@ -170,13 +197,12 @@ const SettingPage = () => {
   if (!user) {
     return (
       <>
-        <p>Please sign in</p>
+        <p>Please Sign In</p>
       </>
     );
   }
   return (
     <>
-      <h1>Settings</h1>
       <ProfileSection />
     </>
   );

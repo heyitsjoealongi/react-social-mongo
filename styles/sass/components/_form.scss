@@ -2,7 +2,6 @@
 
 /*| Form |*/
 %form {
-  display: inline-block;
   width: 100%;
   min-width: 60vh;
   font-family: $sans-serif;
@@ -62,7 +61,7 @@
         box-shadow: 0 0 0 2px $thirdiary-blue;
       }
       &::placeholder {
-        color: $black;
+        color: $thirdiary-black;
       }
     }
   }
@@ -82,6 +81,9 @@
       &:focus {
         border-color: $yellow;
         box-shadow: 0 0 0 2px $thirdiary-yellow;
+      }
+      &::placeholder {
+        color: $thirdiary-black;
       }
     }
   }
@@ -145,7 +147,7 @@
         box-shadow: 0 0 0 2px $thirdiary-yellow;
       }
       &::placeholder {
-        color: $secondary-black;
+        color: $thirdiary-black;
       }
     }
   }

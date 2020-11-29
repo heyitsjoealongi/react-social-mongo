@@ -19,14 +19,13 @@ export default function Content() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2 className="text-center">
-                Hello,&nbsp;
-                {user ? user.username : "Voider"}
-              </h2>
-              <p className="lead text-center">
-                Enter a spectral void below, what you think, what you saw, where
-                you are, whichever you would like.
-              </p>
+              <div className="welcome-message">
+                <h2>
+                  Hello,&nbsp;
+                  {user ? user.username : "Archtyper"}
+                </h2>
+                <p>Say what you think, see, are, whichever you would like.</p>
+              </div>
             </div>
           </div>
           <PostEditor />

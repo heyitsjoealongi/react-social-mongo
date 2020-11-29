@@ -42,22 +42,21 @@ export default function PostEditor() {
       <div className="row">
         <div className="col-lg-12">
           <form
-            class="form-inline form-inline-light"
             onSubmit={hanldeSubmit}
             autoComplete="off"
+            className="form-inline form-inline-light"
           >
-            <div class="form-group">
-              <label for="name" class="sr-only">
-                Password
-              </label>
+            <div className="form-group">
+              <label htmlFor="content" className="sr-only" />
               <input
+                id="content"
                 name="content"
                 type="text"
-                class="form-control"
                 placeholder="Hit the lights"
+                className="form-control"
               />
             </div>
-            <button type="submit" class="button button-cta">
+            <button type="submit" className="button button-cta">
               Create Void
             </button>
           </form>

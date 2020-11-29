@@ -30,9 +30,20 @@ main {
   min-width: 60vw;
 }
 
+/*| System Message ||||||||*/
+.welcome-message {
+  color: $black;
+  text-align: center;
+  h2 {
+    text-transform: capitalize;
+  }
+  p {
+    font-size: 30px;
+  }
+}
+
 /*| System Content ||||||||*/
 .content {
-  width: 100%;
   color: $black;
   border-color: $blue;
   border-style: solid;
@@ -46,7 +57,7 @@ main {
   }
 }
 
-/*| Footer Content ||||||||*/
+/*| System Footer ||||||||*/
 .footer {
   position: relative;
   bottom: 0;

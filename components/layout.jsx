@@ -48,13 +48,11 @@ export default function Layout({ children }) {
                       <li className="nav-item">
                         <a className="nav-link" href="/">
                           Archtyped
-                          <span className="sr-only">(current)</span>
                         </a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/">
                           Voids
-                          <span className="sr-only">(current)</span>
                         </a>
                       </li>
                     </ul>
@@ -63,7 +61,6 @@ export default function Layout({ children }) {
                       <li className="nav-item">
                         <a className="nav-link" href="/">
                           Home
-                          <span className="sr-only">(current)</span>
                         </a>
                       </li>
                       <li className="nav-item">

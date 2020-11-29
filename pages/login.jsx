@@ -54,7 +54,7 @@ const LoginPage = () => {
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="Email address"
+                        placeholder="Email"
                         className="form-control"
                       />
                     </div>

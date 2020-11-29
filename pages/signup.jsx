@@ -63,7 +63,7 @@ const SignupPage = () => {
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="Email Address"
+                        placeholder="Email"
                         class="form-control"
                       />
                     </div>
@@ -73,7 +73,7 @@ const SignupPage = () => {
                         id="password"
                         type="password"
                         name="password"
-                        placeholder="Create a Password"
+                        placeholder="Password"
                         class="form-control"
                       />
                     </div>
