@@ -80,7 +80,7 @@ const ProfileSection = () => {
   return (
     <>
       <Head>
-        <title>Settings</title>
+        <title>react-social-mongo | settings</title>
       </Head>
       <section>
         <div className="container-fluid">
@@ -135,7 +135,7 @@ const ProfileSection = () => {
                     <button
                       disabled={isUpdating}
                       type="submit"
-                      className="button button-light button-inline"
+                      className="button button-light"
                     >
                       Update Profile
                     </button>
@@ -174,10 +174,7 @@ const ProfileSection = () => {
                         className="form-control"
                       />
                     </div>
-                    <button
-                      type="submit"
-                      className="button button-light button-inline"
-                    >
+                    <button type="submit" className="button button-light">
                       Save Changes
                     </button>
                   </form>

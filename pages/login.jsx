@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCurrentUser } from "@/hooks/index";
 
@@ -35,7 +34,7 @@ const LoginPage = () => {
   return (
     <>
       <Head>
-        <title>Login</title>
+        <title>react-social-mongo | login</title>
       </Head>
       <section>
         <div className="container-fluid">
@@ -46,7 +45,9 @@ const LoginPage = () => {
                   <form onSubmit={onSubmit} className="form form-light">
                     <h2 className="form-title">Login</h2>
                     {errorMsg ? (
-                      <p style={{ color: "red" }}>{errorMsg}</p>
+                      <p className="lead" style={{ color: "red" }}>
+                        {errorMsg}
+                      </p>
                     ) : null}
                     <div className="form-group">
                       <label htmlFor="email">Email</label>
@@ -71,9 +72,6 @@ const LoginPage = () => {
                     <button type="submit" className="button button-light">
                       Sign In
                     </button>
-                    <Link href="/forget-password">
-                      <a className="link link-light">Forgot Fassword?</a>
-                    </Link>
                   </form>
                 </div>
               </div>

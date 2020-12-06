@@ -1,25 +1,11 @@
 import nc from "next-connect";
 import multer from "multer";
-import { v2 as cloudinary } from "cloudinary";
 import { all } from "@/middleware/index";
 import { updateUserById } from "@/db/index";
 import { extractUser } from "@/lib/api-helpers";
 
 const upload = multer({ dest: "/tmp" });
 const handler = nc();
-
-/* eslint-disable camelcase */
-const {
-  hostname: cloud_name,
-  username: api_key,
-  password: api_secret,
-} = new URL(process.env.CLOUDINARY_URL);
-
-cloudinary.config({
-  cloud_name,
-  api_key,
-  api_secret,
-});
 
 handler.use(all);
 

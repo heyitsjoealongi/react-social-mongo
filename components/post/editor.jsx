@@ -1,9 +1,6 @@
 /* Framework */
 import React, { useState } from "react";
 
-/* SVG */
-import Brand from "../../public/archtyped.svg";
-
 import { useCurrentUser } from "@/hooks/index";
 
 export default function PostEditor() {
@@ -11,15 +8,7 @@ export default function PostEditor() {
 
   const [msg, setMsg] = useState(null);
 
-  if (!user) {
-    return (
-      <div style={{ color: "#555", textAlign: "center" }}>
-        Please sign in to post
-      </div>
-    );
-  }
-
-  async function hanldeSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const body = {
       content: e.currentTarget.content.value,
@@ -42,7 +31,7 @@ export default function PostEditor() {
       <div className="row">
         <div className="col-lg-12">
           <form
-            onSubmit={hanldeSubmit}
+            onSubmit={handleSubmit}
             autoComplete="off"
             className="form-inline form-inline-light"
           >

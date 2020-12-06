@@ -1,6 +1,6 @@
 import nc from "next-connect";
 import { all } from "@/middleware/index";
-import { getPosts, insertPost } from "@/db/index";
+import { getPosts, insertPost, deletePost } from "@/db/index";
 
 const handler = nc();
 
@@ -39,6 +39,15 @@ handler.post(async (req, res) => {
   });
 
   return res.json({ post });
+});
+
+handler.delete(async (req, res) => {
+  const remove = await deletePost(req.db, {
+    content: req.body.content,
+    creatorId: req.user._id,
+  });
+
+  return res.json({ remove });
 });
 
 export default handler;

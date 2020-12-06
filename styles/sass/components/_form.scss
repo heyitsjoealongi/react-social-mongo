@@ -58,10 +58,10 @@
       border-color: $black;
       &:focus {
         border-color: $blue;
-        box-shadow: 0 0 0 2px $thirdiary-blue;
+        box-shadow: 0 0 0 2px $ternary-blue;
       }
       &::placeholder {
-        color: $thirdiary-black;
+        color: $ternary-black;
       }
     }
   }
@@ -80,10 +80,10 @@
       border-color: $black;
       &:focus {
         border-color: $yellow;
-        box-shadow: 0 0 0 2px $thirdiary-yellow;
+        box-shadow: 0 0 0 2px $ternary-yellow;
       }
       &::placeholder {
-        color: $thirdiary-black;
+        color: $ternary-black;
       }
     }
   }
@@ -144,11 +144,34 @@
       border-color: $black;
       &:focus {
         border-color: $yellow;
-        box-shadow: 0 0 0 2px $thirdiary-yellow;
+        box-shadow: 0 0 0 2px $ternary-yellow;
       }
       &::placeholder {
-        color: $thirdiary-black;
+        color: $ternary-black;
       }
     }
+  }
+}
+
+/*| Media Query ||||||||*/
+
+@media only screen and (max-width: 768px) {
+  .form,
+  .form-inline,
+  .form-cta,
+  .form-light {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+  }
+  %form .button,
+  %form a {
+    margin: 15px 0px;
+    width: 100%;
+  }
+  %form-inline .button,
+  %form-inline a {
+    margin: 0px;
   }
 }

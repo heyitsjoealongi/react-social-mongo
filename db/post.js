@@ -28,3 +28,15 @@ export async function insertPost(db, { content, creatorId }) {
     })
     .then(({ ops }) => ops[0]);
 }
+
+export async function deletePost(db, { content, creatorId }) {
+  return db
+    .collection("posts")
+    .deleteOne({
+      _id: nanoid(12),
+      content,
+      creatorId,
+      createdAt: new Date(),
+    })
+    .then(({ ops }) => ops[0]);
+}

@@ -8,6 +8,8 @@
   margin: 15px 0;
   text-decoration: none;
   box-shadow: $button-shadow;
+  height: 10vh;
+  width: auto;
   ul {
     li {
       margin: 5px;
@@ -73,15 +75,8 @@
       margin: 0;
     }
   }
-  .navbar-toggler {
-    color: $black;
-    border-color: $secondary-black;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 3px;
-    padding: 5px;
-  }
-  @media only screen and (max-width: 768px) {
+
+  @media only screen and (max-width: 992px) {
     a,
     li > li a {
       text-align: center;
@@ -89,7 +84,7 @@
     .navbar-brand {
       padding: 0;
       > svg {
-        width: 25px;
+        width: 30px;
         height: auto;
         padding: 0;
       }
@@ -100,6 +95,33 @@
     }
     .dropdown-menu {
       text-align: center;
+    }
+    .navbar-toggler {
+      color: transparent;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 3px;
+      border-radius: 3px;
+      padding: 5px;
+    }
+    .navbar-collapse {
+      z-index: 1;
+      background-color: transparent;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 3px;
+      border-radius: 3px;
+      text-decoration: none;
+      margin-top: 5px;
+      text-align: center;
+      ul li {
+        margin: 0;
+        a {
+          border-radius: 0;
+          display: block;
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -148,6 +170,20 @@
       }
     }
     .dropdown-divider {
+      border-color: $secondary-yellow;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navigation-one {
+    @extend %navigation;
+    .navbar-toggler {
+      color: $black;
+      border-color: $ternary-black;
+    }
+    .navbar-collapse {
+      background-color: $yellow;
       border-color: $secondary-yellow;
     }
   }

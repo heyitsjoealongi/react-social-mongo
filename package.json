@@ -1,6 +1,6 @@
 {
-  "name": "Archtyped",
-  "version": "0.0.4",
+  "name": "react-social-mongo",
+  "version": "1.0.0",
   "description": "Multi-Page React Application — React, Bootstrap, Next & MongoDB",
   "main": "index.js",
   "scripts": {
@@ -11,20 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/collectedview/Archtyped.git"
+    "url": "git+https://github.com/collectedview/react-social-mongo.git"
   },
   "author": "Joe Alongi (https://collectedview.xyz/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/collectedview/Archtyped/issues"
+    "url": "https://github.com/collectedview/react-social-mongo/issues"
   },
-  "homepage": "https://github.com/collectedview/Archtyped#readme",
+  "homepage": "https://github.com/collectedview/react-social-mongo#readme",
   "dependencies": {
-    "@sendgrid/mail": "^7.4.0",
     "@svgr/webpack": "^5.5.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.3",
-    "cloudinary": "^1.23.0",
     "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "eslint-config-prettier": "^6.15.0",

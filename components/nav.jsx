@@ -1,31 +1,32 @@
-/* Framework */
-import React, { useState } from "react";
+import React, { Component } from "react";
 import Link from "next/link";
-
-/* System */
-import Meta from "@/components/meta";
 
 /* SVG */
 import Brand from "../public/react-social-mongo.svg";
 
-import { useCurrentUser } from "@/hooks/index";
-
-export default function Layout({ children }) {
-  const [user, { mutate }] = useCurrentUser();
-  const handleLogout = async () => {
-    await fetch("/api/auth", {
-      method: "DELETE",
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true,
+    };
+  }
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed,
     });
-    mutate(null);
-  };
+  }
+  render() {
+    const collapsed = this.state.collapsed;
+    const classOne = collapsed
+      ? "collapse navbar-collapse"
+      : "collapse navbar-collapse show";
+    const classTwo = collapsed
+      ? "navbar-toggler navbar-toggler-right collapsed"
+      : "navbar-toggler navbar-toggler-right";
 
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
-  return (
-    <>
-      <Meta />
-
+    return (
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
@@ -36,14 +37,13 @@ export default function Layout({ children }) {
                 </a>
               </Link>
               <button
-                className="custom-toggler navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
-                data-target="#navbar"
-                aria-controls="navbar"
-                aria-expanded={!isNavCollapsed ? true : false}
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
                 aria-label="Toggle navigation"
-                onClick={handleNavCollapse}
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -51,8 +51,6 @@ export default function Layout({ children }) {
               <div
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
-                class={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
-                id="navbar"
               >
                 {!user ? (
                   <ul className="navbar-nav mr-auto">
@@ -67,8 +65,8 @@ export default function Layout({ children }) {
                     </li>
                   </ul>
                 )}
-                <div>
-                  {!user ? (
+                <span>
+                  {!props.user ? (
                     <>
                       <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
@@ -100,38 +98,13 @@ export default function Layout({ children }) {
                       </ul>
                     </>
                   )}
-                </div>
+                </span>
               </div>
             </nav>
           </div>
         </div>
       </div>
-
-      <main>{children}</main>
-
-      <footer className="footer">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="inside">
-                <hr />
-                <p>
-                  Made with <Brand /> by &nbsp;
-                  <Link href="https://twitter.com/collectedview">
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      className="link link-light"
-                    >
-                      @collectedview
-                    </a>
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </>
-  );
+    );
+  }
 }
+export default Nav;

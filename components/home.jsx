@@ -13,7 +13,7 @@ export default function Content() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>react-social-mongo | home</title>
       </Head>
       <section>
         <div className="container">

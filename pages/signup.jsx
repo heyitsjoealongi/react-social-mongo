@@ -34,7 +34,7 @@ const SignupPage = () => {
   return (
     <>
       <Head>
-        <title>Sign Up</title>
+        <title>react-social-mongo | sign up</title>
       </Head>
       <section>
         <div className="container-fluid">
@@ -45,7 +45,9 @@ const SignupPage = () => {
                   <form onSubmit={handleSubmit} className="form form-cta">
                     <h2 className="form-title">Sign Up</h2>
                     {errorMsg ? (
-                      <p style={{ color: "red" }}>{errorMsg}</p>
+                      <p className="lead" style={{ color: "red" }}>
+                        {errorMsg}
+                      </p>
                     ) : null}
                     <div class="form-group">
                       <label htmlFor="username">Username</label>
@@ -64,8 +66,15 @@ const SignupPage = () => {
                         type="email"
                         name="email"
                         placeholder="Email"
+                        aria-describedby="emailHelp"
                         class="form-control"
                       />
+                      <small
+                        id="username"
+                        className="form-text text-muted text-center"
+                      >
+                        We'll Never Share Your Email With Anyone Else.
+                      </small>
                     </div>
                     <div class="form-group">
                       <label htmlFor="password">Password</label>

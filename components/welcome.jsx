@@ -6,7 +6,7 @@ export default function Welcome() {
   return (
     <>
       <Head>
-        <title>Welcome</title>
+        <title>react-social-mongo | welcome</title>
       </Head>
       <section>
         <div className="container">
@@ -14,9 +14,10 @@ export default function Welcome() {
             <div className="col-lg-12">
               <div className="content">
                 <div className="inside">
-                  <h1>Welcome to Archtyped</h1>
+                  <h1>Welcome to React Social Mongo</h1>
                   <p className="lead">
-                    Connecting spectral valances with symmetry through voids.
+                    Multi-Page React Application — React, Bootstrap, Next &
+                    MongoDB
                   </p>
                   <div className="button-group">
                     <Link href="/login">
