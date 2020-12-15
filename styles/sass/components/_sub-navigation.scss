@@ -1,0 +1,56 @@
+// Sub-Navigation
+
+/*| Links / Tabs / Pills & Tags & Backdrops |*/
+%sub-navigation {
+  display: inline-block;
+  font-family: $serif;
+  font-weight: $serif-regular;
+  transition: all 0.3s ease-in-out;
+}
+
+/*| Links ||||||||*/
+.link {
+  @extend %sub-navigation;
+  color: $blue;
+  background-color: transparent;
+  padding: 15px 30px;
+
+  &:hover {
+    color: #fff;
+    background-color: $secondary-blue;
+  }
+}
+
+/*| Tabs ||||||||*/
+.tab {
+  @extend %sub-navigation;
+  color: $black;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: $blue;
+  padding: 15px 60px;
+
+  &:hover {
+    color: #fff;
+    background-color: $blue;
+    border-color: $secondary-blue;
+  }
+}
+
+/*| Pills & Tags & Backdrops ||||||||*/
+.dropin {
+  @extend %sub-navigation;
+  color: $black;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 15px 30px;
+
+  &:hover {
+    color: $black;
+    background-color: $black;
+    border-color: $black;
+  }
+}

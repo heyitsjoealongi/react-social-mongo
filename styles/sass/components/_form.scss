@@ -1,0 +1,177 @@
+// Forms
+
+/*| Form |*/
+%form {
+  width: 100%;
+  min-width: 60vh;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  color: transparent;
+  .form-title {
+    color: transparent;
+  }
+  .form-group {
+    text-align: left;
+    label {
+      font-weight: $sans-serif-bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    div {
+      margin: 30px 15px;
+    }
+    .form-control {
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: 1px;
+      border-radius: 3px;
+      border-style: solid;
+      padding: 30px;
+      &:focus {
+        border-color: transparent;
+        box-shadow: transparent;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .button,
+  a {
+    margin: 15px;
+  }
+}
+
+/*| Form Light ||||||||*/
+.form-light {
+  @extend %form;
+  color: $blue;
+  .form-title {
+    color: $blue;
+  }
+  .form-group {
+    .form-control {
+      color: $black;
+      border-color: $black;
+      &:focus {
+        border-color: $blue;
+        box-shadow: 0 0 0 2px $ternary-blue;
+      }
+      &::placeholder {
+        color: $ternary-black;
+      }
+    }
+  }
+}
+
+/*| Form CTA ||||||||*/
+.form-cta {
+  @extend %form;
+  color: $yellow;
+  .form-title {
+    color: $yellow;
+  }
+  .form-group {
+    .form-control {
+      color: $black;
+      border-color: $black;
+      &:focus {
+        border-color: $yellow;
+        box-shadow: 0 0 0 2px $ternary-yellow;
+      }
+      &::placeholder {
+        color: $ternary-black;
+      }
+    }
+  }
+}
+
+/*| Form Inline |*/
+%form-inline {
+  width: 100%;
+  min-width: 60vh;
+  font-family: $sans-serif;
+  font-weight: $sans-serif-regular;
+  color: transparent;
+  margin: 60px 0;
+  .form-group {
+    text-align: left;
+    width: 100%;
+    label {
+      font-weight: $sans-serif-bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+    div {
+      margin: 30px 15px;
+    }
+    .form-control {
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: 1px;
+      border-radius: 3px;
+      border-style: solid;
+      width: 100%;
+      padding: 30px;
+      &:focus {
+        border-color: transparent;
+        box-shadow: transparent;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .button,
+  a {
+    width: 100%;
+    margin: 15px 0px;
+  }
+}
+
+/*| Form Inline Light ||||||||*/
+.form-inline-light {
+  @extend %form-inline;
+  color: $blue;
+  .form-group {
+    .form-control {
+      color: $black;
+      border-color: $black;
+      &:focus {
+        border-color: $yellow;
+        box-shadow: 0 0 0 2px $ternary-yellow;
+      }
+      &::placeholder {
+        color: $ternary-black;
+      }
+    }
+  }
+}
+
+/*| Media Query ||||||||*/
+
+@media only screen and (max-width: 768px) {
+  .form,
+  .form-inline,
+  .form-cta,
+  .form-light {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+  }
+  %form .button,
+  %form a {
+    margin: 15px 0px;
+    width: 100%;
+  }
+  %form-inline .button,
+  %form-inline a {
+    margin: 0px;
+  }
+}

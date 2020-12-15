@@ -1,0 +1,101 @@
+//Framework Base
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 60vw;
+  min-width: 60vw;
+}
+
+/*| System Message ||||||||*/
+.welcome-message {
+  color: $black;
+  text-align: center;
+  h2 {
+    text-transform: capitalize;
+  }
+  p {
+    font-size: 30px;
+  }
+}
+
+/*| System Content ||||||||*/
+.content {
+  color: $black;
+  border-color: $blue;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  box-shadow: $card-shadow;
+  margin: 30px 0;
+  .inside {
+    text-align: center;
+    padding: 60px 30px;
+  }
+}
+
+/*| System Footer ||||||||*/
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  .inside {
+    text-align: center;
+    p {
+      padding: 15px;
+      > svg {
+        width: 30px;
+        height: auto;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+/*| Media Query ||||||||*/
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 0;
+    margin: 15px 0;
+    .inside {
+      padding: 15px;
+      margin: 0;
+    }
+  }
+  main {
+    display: inline;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+}
