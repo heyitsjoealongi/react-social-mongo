@@ -28,7 +28,7 @@ Connected to MongoDB for full-stack database. Server-side rendered functionality
 
 React Social Mongo is a template for React & Next.js utilizing frameworks for quickly iterating and developing applications with Bootstrap and JSX.
 
-- Website: [collectedview.xyz](https://collectedview.xyz)
+- Website: [collectedview.io](https://collectedview.io)
 
 - Twitter: [@collectedview](https://twitter.com/collectedview)
 
