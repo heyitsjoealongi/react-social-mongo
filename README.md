@@ -1,8 +1,8 @@
-![React Social Mongo](https://raw.githubusercontent.com/collectedview/react-social-mongo/master/public/react-social-mongo_image.png)
+![React Social Mongo](https://raw.githubusercontent.com/heyitsjoealongi/react-social-mongo/master/public/react-social-mongo_image.png)
 
 # React Social Mongo
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000) [![License: MIT ](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/collectedview/react-social-mongo/blob/master/LICENSE) ![GitHub stars](https://img.shields.io/github/stars/collectedview/react-social-mongo?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/collectedview?label=Follow&style=social)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000) [![License: MIT ](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/heyitsjoealongi/react-social-mongo/blob/master/LICENSE) ![GitHub stars](https://img.shields.io/github/stars/heyitsjoealongi/react-social-mongo?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/heyitsjoealongi?label=Follow&style=social)
 
 React Social Mongo: Multi-Page React Application — [React](https://reactjs.org/), [Bootstrap](https://getbootstrap.com/), [Next.js](https://vercel.com/) & [MongoDB](https://www.mongodb.com/)
 for building private social networks on [Node.js](https://nodejs.org/en/) configuration available by [Open Source](https://opensource.org/).
@@ -27,13 +27,10 @@ Connected to MongoDB for full-stack database. Server-side rendered functionality
 
 React Social Mongo is a template for React & Next.js utilizing frameworks for quickly iterating and developing applications with Bootstrap and JSX.
 
-- Website: [collectedview.io](https://collectedview.io)
-
-- Twitter: [@collectedview](https://twitter.com/collectedview)
-
-- GitHub: [@collectedview](https://github.com/collectedview)
-
-- LinkedIn: [@collectedview](https://www.linkedin.com/in/collectedview)
+- Website: [heyitsjoealongi.com](https://heyitsjoealongi.com/)
+- Twitter: [@heyitsjoealongi](https://twitter.com/heyitsjoealongi/)
+- GitHub: [@heyitsjoealongi](https://github.com/heyitsjoealongi/)
+- LinkedIn: [@heyitsjoealongi](https://www.linkedin.com/in/heyitsjoealongi/)
 
 ## Build
 
@@ -75,17 +72,17 @@ This project runs on Node.js while the DOM UI elements are established using Rea
 
 ### Installation
 
-- **Option 1.)** [Download the latest version of this template from GitHub](https://github.com/collectedview/react-social-mongo/archive/master.zip)
+- **Option 1.)** [Download the latest version of this template from GitHub](https://github.com/heyitsjoealongi/react-social-mongo/archive/master.zip)
 
 - **Option 2.)** Clone this repository
 
 ```
 
-git clone https://github.com/collectedview/react-social-mongo.git
+git clone https://github.com/heyitsjoealongi/react-social-mongo.git
 
 ```
 
-- **Option 3.)** [Fork, Clone, or Download via GitHub Desktop](x-github-client://openRepo/https://github.com/collectedview/react-social-mongo)
+- **Option 3.)** [Fork, Clone, or Download via GitHub Desktop](x-github-client://openRepo/https://github.com/heyitsjoealongi/react-social-mongo)
 
 ##### Environment Variables
 
@@ -145,7 +142,7 @@ Create a [Vercel](https://vercel.com/) account, choose a project name, and conne
 
 ##### Option 1: Deploy from Repository
 
-[Clone Repo](x-github-client://openRepo/https://github.com/collectedview/react-social-mongo)
+[Clone Repo](x-github-client://openRepo/https://github.com/heyitsjoealongi/react-social-mongo)
 
 ##### Option 2: Deploy from Git
 
@@ -159,7 +156,7 @@ Configure your deploy branch, settings, and domain within [Vercel](https://verce
 
 ##### Bugs and Issues
 
-Having an issue with the template? Report bugs & issues with Purple on GitHub via [Issues](https://github.com/collectedview/react-social-mongo/issues). Fork, Pull, or Send an email over to join as a contributor! Join in on the open source conversation on [Twitter](https://twitter.com/collectedview).
+Having an issue with the template? Report bugs & issues with Purple on GitHub via [Issues](https://github.com/heyitsjoealongi/react-social-mongo/issues). Fork, Pull, or Send an email over to join as a contributor! Join in on the open source conversation on [Twitter](https://twitter.com/heyitsjoealongi).
 
 ##### Acknowledgments
 
@@ -181,4 +178,4 @@ Having an issue with the template? Report bugs & issues with Purple on GitHub vi
 
 ##### License
 
-© 2020 React Social Mongo released via [MIT](https://opensource.org/licenses/MIT) license. Information on this license can be viewed as it applies to this repository on GitHub at [React Social Mongo License](https://github.com/collectedview/react-social-mongo/blob/master/LICENSE).
+© 2020 React Social Mongo released via [MIT](https://opensource.org/licenses/MIT) license. Information on this license can be viewed as it applies to this repository on GitHub at [React Social Mongo License](https://github.com/heyitsjoealongi/react-social-mongo/blob/master/LICENSE).
